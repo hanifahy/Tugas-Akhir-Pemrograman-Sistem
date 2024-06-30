@@ -1,0 +1,64 @@
+def kalkulator():
+  """
+  Fungsi untuk menjalankan kalkulator sederhana.
+
+  Args:
+    Tidak ada argumen.
+
+  Returns:
+    Tidak ada nilai yang dikembalikan.
+  """
+  while True:
+    # Menampilkan menu operasi
+    print("\nKalkulator Sederhana")
+    print("1. Penjumlahan")
+    print("2. Pengurangan")
+    print("3. Perkalian")
+    print("4. Pembagian")
+    print("5. Keluar")
+
+    # Meminta pilihan operasi dari pengguna
+    pilihan = int(input("Masukkan pilihan Anda (1-5): "))
+
+    if pilihan == 1:
+      # Penjumlahan
+      angka1 = float(input("Masukkan angka pertama: "))
+      angka2 = float(input("Masukkan angka kedua: "))
+      hasil = angka1 + angka2
+      print(f"{angka1} + {angka2} = {hasil}")
+
+    elif pilihan == 2:
+      # Pengurangan
+      angka1 = float(input("Masukkan angka pertama: "))
+      angka2 = float(input("Masukkan angka kedua: "))
+      hasil = angka1 - angka2
+      print(f"{angka1} - {angka2} = {hasil}")
+
+    elif pilihan == 3:
+      # Perkalian
+      angka1 = float(input("Masukkan angka pertama: "))
+      angka2 = float(input("Masukkan angka kedua: "))
+      hasil = angka1 * angka2
+      print(f"{angka1} x {angka2} = {hasil}")
+
+    elif pilihan == 4:
+      # Pembagian
+      angka1 = float(input("Masukkan angka pertama: "))
+      angka2 = float(input("Masukkan angka kedua: "))
+      if angka2 == 0:
+        print("Tidak bisa membagi dengan 0!")
+      else:
+        hasil = angka1 / angka2
+        print(f"{angka1} / {angka2} = {hasil}")
+
+    elif pilihan == 5:
+      # Keluar
+      print("Terima kasih telah menggunakan kalkulator!")
+      break
+
+    else:
+      # Pilihan tidak valid
+      print("Pilihan Anda tidak valid. Silakan masukkan angka antara 1 dan 5.")
+
+# Menjalankan fungsi kalkulator
+kalkulator()
